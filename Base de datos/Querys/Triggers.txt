@@ -1,0 +1,2 @@
+--Trigger para verificar que la tabla Usuario no contenga nombres iguales
+SELECT username FROM `Usuario` WHERE EXISTS( SELECT * FROM usuario WHERE username LIKE 'victor' );
