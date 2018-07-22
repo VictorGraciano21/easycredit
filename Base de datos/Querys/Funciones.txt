@@ -1,0 +1,2 @@
+--Función ue retorna el siguente valor de la tabla Detalle
+CREATE FUNCTION `maxDetalle`() RETURNS INT NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER RETURN (SELECT max(id_detalle)+1 from detalle)

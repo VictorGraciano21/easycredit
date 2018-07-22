@@ -3,17 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<title>EasyCredit</title>
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+	<script type="text/javascript" src="../Controlador/formularioController.js"></script>
+	<script type="text/javascript" src="../Controlador/conectionController.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
 	<section id="seccion1">
 		<div id="informacion">
 			<table border="1">
 				<tr>
-					<td>Información del Usuario</td>
+					<td colspan="2">Información del Usuario</td>
 				</tr>
-				<tr>
-					<td></td>
-				</tr>
+				<tbody id="contenidoUsuario"></tbody>
 			</table>
 		</div>
 	</section>
@@ -21,8 +26,9 @@
 		<div id="historial">
 			<table border="1">
 				<tr>
-					<td>Historial Crediticio</td>
+					<td colspan="2">Historial Crediticio</td>
 				</tr>
+				<tbody id="contenidoHistorial"></tbody>
 				<tr>
 					<td></td>
 				</tr>
@@ -33,11 +39,9 @@
 		<div id="solicitudes">
 			<table border="1">
 				<tr>
-					<td>Solicitudes actuales</td>
+					<td colspan="2">Solicitudes actuales</td>
 				</tr>
-				<tr>
-					<td></td>
-				</tr>
+				<tbody id="contenidoSolicitud"></tbody>
 				<tr>
 					<td><button id="solicitar">Solicitar</button></td>
 				</tr>

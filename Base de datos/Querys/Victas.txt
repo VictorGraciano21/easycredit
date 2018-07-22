@@ -1,0 +1,23 @@
+--Vista usuario - solicitudes pendientes
+--Vista que muestra las solicitudes pendientes del usuario
+create view vw_solicitudesPendientes as
+select u.username, s.*, d.* from usuario u
+inner join solicitudes s on s.usuario = u.userid
+inner join detalle d on d.id_detalle = s.detalle
+where s.estado=false and s.autorizacion=true
+
+--Vista usuario - solicitudes autorizadas
+--Vista que muestra el historial crediticio del usuario
+create view vw_historial as
+select u.username, s.*, d.* from usuario u
+inner join solicitudes s on s.usuario = u.userid
+inner join detalle d on d.id_detalle = s.detalle
+where s.autorizacion=true
+
+--Vista usuario - solicitudes sin autorizar
+--Vista que muestra las solicitudes del usuario sin autorizar
+create view vw_solicitudesSinAutorizar as
+select u.username, s.*, d.* from usuario u
+inner join solicitudes s on s.usuario = u.userid
+inner join detalle d on d.id_detalle = s.detalle
+where s.estado=false and s.autorizacion=false
