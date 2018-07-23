@@ -50,7 +50,7 @@ function autorizaRechaza(folio, opc){
 	if(opc){//Sección que se encarga de actualizar y marcar como autorizada la solicitud
 		//alert("Autorizarás la solicitud: "+folio);
 		var datos = {datos:'actualizacion',
-					cambio:true,
+					cambio:1,
 					id:folio
 			};
 	}else{ //Sección que se encarga de actualizar y marcar como rechazada la solicitud
