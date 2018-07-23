@@ -1,0 +1,17 @@
+Herramientas:
+-XAMPP v3.2.2
+   *Apache
+   *MySQL
+-SublimeText
+-GitKraken
+
+
+Lenguajes:
+-JavaScript
+-Php
+-CSS
+
+Otros:
+-HTML
+
+Alquitectura MVC
