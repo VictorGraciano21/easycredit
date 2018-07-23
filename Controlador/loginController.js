@@ -8,6 +8,7 @@ var inicioLogin = function () {
 }
 $(document).on("ready", inicioLogin);
 
+//Función que prepara los datos para el inicio de sesión
 function Registro(tipo){
 	var usuario = document.getElementById('cajaUsuario').value;
 	var opc="";

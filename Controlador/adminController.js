@@ -1,8 +1,10 @@
 var admin = function (){
-	inicia();
+	inicia(); 
 }
 $(document).on("ready",admin);
 
+//Función encargada de dar inicio al rellenado de la tabla que mostrara los datos de las 
+//solicitudes de los clientes, las cuales se podrán rechazar o autorizar
 function inicia(){
 	var datos = {datos:'consultaAdmin'
 			};
@@ -12,6 +14,7 @@ function inicia(){
 
 }
 
+//Función que crea la tabla con los datos de las solicitudes
 function CreaTabla(datos){
 	if (datos.length==1) {location.reload();}else{
 	var texto="";

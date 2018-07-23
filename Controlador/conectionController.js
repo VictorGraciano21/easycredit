@@ -1,3 +1,4 @@
+/*Clase enncargada del pase de datos con el modelo a travez de AJAX*/
 class conectionController{
 
 	constructor(datos){

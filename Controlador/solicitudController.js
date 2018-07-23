@@ -6,6 +6,7 @@ var solicitando = function(){
 
 	var volver = function(){ window.location.replace("formulario.html"); }
 
+	//Función que prepara los datos para alta de una nueva solicitud
 	var solicitar = function(){
 		var monto=document.getElementById('cajaMonto').value;
 		var edad=document.getElementById('cajaEdad').value;
