@@ -4,7 +4,7 @@ create view vw_solicitudesPendientes as
 select u.username, s.*, d.* from usuario u
 inner join solicitudes s on s.usuario = u.userid
 inner join detalle d on d.id_detalle = s.detalle
-where s.estado=false and s.autorizacion=true
+where s.estado=false and s.autorizacion=1
 
 --Vista usuario - solicitudes autorizadas
 --Vista que muestra el historial crediticio del usuario
@@ -12,7 +12,7 @@ create view vw_historial as
 select u.username, s.*, d.* from usuario u
 inner join solicitudes s on s.usuario = u.userid
 inner join detalle d on d.id_detalle = s.detalle
-where s.autorizacion=true
+where s.autorizacion=1 and s.autorizacion=3
 
 --Vista usuario - solicitudes sin autorizar
 --Vista que muestra las solicitudes del usuario sin autorizar
@@ -20,4 +20,4 @@ create view vw_solicitudesSinAutorizar as
 select u.username, s.*, d.* from usuario u
 inner join solicitudes s on s.usuario = u.userid
 inner join detalle d on d.id_detalle = s.detalle
-where s.estado=false and s.autorizacion=false
+where s.estado=false and s.autorizacion=0

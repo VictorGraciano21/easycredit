@@ -98,7 +98,7 @@ function solicitud()
 	$formaPago=$_POST['pago'];
 	$plazo=$_POST['plazo'];
 	$id=$_POST['id'];
-	$texto="insert into solicitudes(detalle, estado, autorizacion, usuario) values(maxDetalle(), false, false, ".$id.");";
+	$texto="insert into solicitudes(detalle, estado, autorizacion, usuario) values(maxDetalle(), false, 0, ".$id.");";
 	$query="insert into detalle(Monto, edad, forma_de_pago, plazo) VALUES(".$monto.", ".$edad.", '".$formaPago."', ".$plazo."); ";
 	
 	$conexion = mysqli_connect('localhost','root','','bd_easycredit');
