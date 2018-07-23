@@ -3,39 +3,60 @@
 <head>
 	<meta charset="utf-8">
 	<title>EasyCredit</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">   
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+	<script type="text/javascript" src="../Controlador/solicitudController.js"></script>
+	<script type="text/javascript" src="../Controlador/conectionController.js"></script>
 </head>
 <body>
-	<table border="1">
+	<br><br>
+	<table class="table table-hover" style="width: 40%; display: inline-block; float: left; margin-left: 550px;">
 		<tr>
-			<td colspan="2">Frmulario de solicitud</td>
+			<td colspan="3"><h3>Formulario de solicitud</h3></td>
 		</tr>
 		<tr>
 			<td>Monto a solicitar: </td>
-			<td><input type="text" name="cajaMonto"></td>
+			<td><input type="text" id="cajaMonto"></td>
 		</tr>
 		<tr>
 			<td>Edad: </td>
-			<td><input type="text" name="cajaEdad"></td>
+			<td><input type="text" id="cajaEdad"></td>
 		</tr>
 		<tr>
 			<td>Forma de pago: </td>
-			<td><input type="checkbox" name="cajaForma"></td>
+			<td><input type="checkbox" id="cajaForma1">Tarjeta
+			<input type="checkbox" id="cajaForma2">Efectivo</td>
 		</tr>
-		<tr>
+		<tr id="tarjeta" hidden>
 			<td>Tarjeta: </td>
 			<td>
-				<select>
-				
+				<select id="card">
+					<option></option>
+					<option>MasterCard</option>
+					<option>Visa</option>
+					<option>PayPal</option>
+					<option>Bancomer</option>
+					<option>Santander</option>
 				</select>
 			</td>
 		</tr>
 		<tr>
 			<td>Plazos de: </td>
 			<td>
-				<select>
-					
+				<select id="plazo">
+					<option>3</option>
+					<option>6</option>
+					<option>9</option>
 				</select>
+				Meses
 			</td>
+		</tr>
+		<tr>
+			<td><button type="button" class="btn btn-info btn-block" id="volver">Volver</button></td>
+			<td><button type="button" class="btn btn-info btn-block" id="solicitar">Solicitar</button></td>
 		</tr>
 	</table>
 </body>
