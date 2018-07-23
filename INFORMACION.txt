@@ -14,4 +14,4 @@ Lenguajes:
 Otros:
 -HTML
 
-Alquitectura MVC
+Arquitectura MVC
